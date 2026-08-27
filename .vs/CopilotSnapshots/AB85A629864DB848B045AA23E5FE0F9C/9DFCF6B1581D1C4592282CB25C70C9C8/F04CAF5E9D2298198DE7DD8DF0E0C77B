@@ -1,0 +1,21 @@
+﻿namespace swBiblioteca
+{
+    public partial class FrmPrincipal : Form
+    {
+        public FrmPrincipal()
+        {
+            InitializeComponent();
+        }
+     
+
+        private void AbrirFormulario(Form formulario)
+        {
+            pnlCcontenido.Controls.Clear();
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            pnlCcontenido.Controls.Add(formulario);
+            formulario.Show();
+        }
+    }
+}
