@@ -15,4 +15,8 @@ namespace swBiblioteca
             InitializeComponent();
         }
     }
-}
+     private void label1_Click(object sender, EventArgs e)
+        {
+            // Actualmente no realiza ninguna acción. Mantener vacío o implementar comportamiento necesario.
+        }
+    }

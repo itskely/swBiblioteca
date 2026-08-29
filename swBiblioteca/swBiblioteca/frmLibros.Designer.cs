@@ -79,7 +79,7 @@
             label1.Size = new Size(41, 20);
             label1.TabIndex = 0;
             label1.Text = "ISBN";
-            label1.Click += this.label1_Click;
+          
             // 
             // txtBuscar
             // 
