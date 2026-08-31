@@ -6,7 +6,7 @@ namespace swBiblioteca
         {
             InitializeComponent();
         }
-     
+
 
         private void AbrirFormulario(Form formulario)
         {
@@ -14,8 +14,9 @@ namespace swBiblioteca
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
-            pnlCcontenido.Controls.Add(formulario);
             formulario.Show();
+            pnlCcontenido.Controls.Add(formulario);
+            formulario.BringToFront();
         }
         private void btnInicio_Click(object sender, EventArgs e)
         {
@@ -54,6 +55,11 @@ namespace swBiblioteca
         private void lblSubtitulo_Click(object sender, EventArgs e)
         {
             // Actualmente no realiza ninguna acción. Mantener vacío o implementar comportamiento necesario.
+        }
+
+        private void imgLogo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

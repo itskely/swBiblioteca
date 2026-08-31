@@ -22,3 +22,7 @@ C:\Users\LAPTOP\Documents\GitHub\swBiblioteca\swBiblioteca\swBiblioteca\obj\Debu
 C:\Users\LAPTOP\Documents\GitHub\swBiblioteca\swBiblioteca\swBiblioteca\obj\Debug\net10.0-windows\swBiblioteca.FrmPrestamos.resources
 C:\Users\LAPTOP\Documents\GitHub\swBiblioteca\swBiblioteca\swBiblioteca\obj\Debug\net10.0-windows\swBiblioteca.FrmReportes.resources
 C:\Users\LAPTOP\Documents\GitHub\swBiblioteca\swBiblioteca\swBiblioteca\obj\Debug\net10.0-windows\swBiblioteca.FrmUsuarios.resources
+C:\Users\LAPTOP\Documents\GitHub\swBiblioteca\swBiblioteca\swBiblioteca\obj\Debug\net10.0-windows\swBiblioteca.sourcelink.json
+C:\Users\LAPTOP\Documents\GitHub\swBiblioteca\swBiblioteca\swBiblioteca\bin\Debug\net10.0-windows\FontAwesome.Sharp.dll
+C:\Users\LAPTOP\Documents\GitHub\swBiblioteca\swBiblioteca\swBiblioteca\obj\Debug\net10.0-windows\swBiblioteca.csproj.AssemblyReference.cache
+C:\Users\LAPTOP\Documents\GitHub\swBiblioteca\swBiblioteca\swBiblioteca\obj\Debug\net10.0-windows\swBiblio.93458206.Up2Date

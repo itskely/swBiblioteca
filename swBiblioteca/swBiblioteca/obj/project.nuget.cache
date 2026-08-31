@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "H6+2GEqXrrg=",
+  "dgSpecHash": "CZ1/7LSSgYI=",
   "success": true,
   "projectFilePath": "C:\\Users\\LAPTOP\\Documents\\GitHub\\swBiblioteca\\swBiblioteca\\swBiblioteca\\swBiblioteca.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LAPTOP\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512"
+  ],
   "logs": []
 }
