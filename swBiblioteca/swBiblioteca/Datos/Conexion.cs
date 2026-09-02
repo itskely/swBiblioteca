@@ -1,6 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 
-namespace SwBiblioteca.Datos
+namespace swBiblioteca.Datos
 {
     public class Conexion
     {
@@ -11,5 +11,6 @@ namespace SwBiblioteca.Datos
         {
             return new SqlConnection(cadenaConexion);
         }
+
     }
 }

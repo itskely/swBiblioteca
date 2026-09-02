@@ -79,7 +79,7 @@
             btnSalida.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSalida.IconSize = 35;
             btnSalida.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSalida.Location = new Point(0, 445);
+            btnSalida.Location = new Point(0, 465);
             btnSalida.Name = "btnSalida";
             btnSalida.Size = new Size(244, 45);
             btnSalida.TabIndex = 7;
@@ -99,7 +99,7 @@
             btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnReportes.IconSize = 35;
             btnReportes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReportes.Location = new Point(0, 400);
+            btnReportes.Location = new Point(0, 420);
             btnReportes.Name = "btnReportes";
             btnReportes.Size = new Size(244, 45);
             btnReportes.TabIndex = 6;
@@ -119,7 +119,7 @@
             btnPrestamos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnPrestamos.IconSize = 35;
             btnPrestamos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPrestamos.Location = new Point(0, 355);
+            btnPrestamos.Location = new Point(0, 375);
             btnPrestamos.Name = "btnPrestamos";
             btnPrestamos.Size = new Size(244, 45);
             btnPrestamos.TabIndex = 5;
@@ -139,7 +139,7 @@
             btnEditoriales.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnEditoriales.IconSize = 35;
             btnEditoriales.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditoriales.Location = new Point(0, 310);
+            btnEditoriales.Location = new Point(0, 330);
             btnEditoriales.Name = "btnEditoriales";
             btnEditoriales.Size = new Size(244, 45);
             btnEditoriales.TabIndex = 4;
@@ -160,7 +160,7 @@
             btnAutores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnAutores.IconSize = 35;
             btnAutores.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAutores.Location = new Point(0, 265);
+            btnAutores.Location = new Point(0, 285);
             btnAutores.Name = "btnAutores";
             btnAutores.Size = new Size(244, 45);
             btnAutores.TabIndex = 3;
@@ -180,7 +180,7 @@
             btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnUsuarios.IconSize = 35;
             btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
-            btnUsuarios.Location = new Point(0, 220);
+            btnUsuarios.Location = new Point(0, 240);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.Size = new Size(244, 45);
             btnUsuarios.TabIndex = 2;
@@ -200,7 +200,7 @@
             btnLibros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnLibros.IconSize = 35;
             btnLibros.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLibros.Location = new Point(0, 175);
+            btnLibros.Location = new Point(0, 195);
             btnLibros.Name = "btnLibros";
             btnLibros.Size = new Size(244, 45);
             btnLibros.TabIndex = 1;
@@ -220,7 +220,7 @@
             btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnInicio.IconSize = 35;
             btnInicio.ImageAlign = ContentAlignment.MiddleLeft;
-            btnInicio.Location = new Point(0, 130);
+            btnInicio.Location = new Point(0, 150);
             btnInicio.Name = "btnInicio";
             btnInicio.Size = new Size(244, 45);
             btnInicio.TabIndex = 0;
@@ -239,16 +239,16 @@
             pnlLogo.Dock = DockStyle.Top;
             pnlLogo.Location = new Point(0, 0);
             pnlLogo.Name = "pnlLogo";
-            pnlLogo.Size = new Size(244, 130);
+            pnlLogo.Size = new Size(244, 150);
             pnlLogo.TabIndex = 0;
             // 
             // imgLogo
             // 
             imgLogo.BackColor = Color.Transparent;
             imgLogo.Image = (Image)resources.GetObject("imgLogo.Image");
-            imgLogo.Location = new Point(3, 3);
+            imgLogo.Location = new Point(71, 0);
             imgLogo.Name = "imgLogo";
-            imgLogo.Size = new Size(90, 124);
+            imgLogo.Size = new Size(90, 90);
             imgLogo.SizeMode = PictureBoxSizeMode.Zoom;
             imgLogo.TabIndex = 2;
             imgLogo.TabStop = false;
@@ -257,7 +257,7 @@
             // lblSubtitulo
             // 
             lblSubtitulo.AutoSize = true;
-            lblSubtitulo.Location = new Point(99, 70);
+            lblSubtitulo.Location = new Point(53, 127);
             lblSubtitulo.Name = "lblSubtitulo";
             lblSubtitulo.Size = new Size(142, 20);
             lblSubtitulo.TabIndex = 1;
@@ -270,7 +270,7 @@
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("MV Boli", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Black;
-            lblTitulo.Location = new Point(90, 41);
+            lblTitulo.Location = new Point(41, 98);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(154, 29);
             lblTitulo.TabIndex = 0;

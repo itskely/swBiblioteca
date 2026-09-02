@@ -1,3 +1,5 @@
+using swBiblioteca.Datos;
+
 namespace swBiblioteca
 {
     public partial class FrmPrincipal : Form
@@ -5,6 +7,8 @@ namespace swBiblioteca
         public FrmPrincipal()
         {
             InitializeComponent();
+             
+           AbrirFormulario(new FrmInicio());
         }
 
 

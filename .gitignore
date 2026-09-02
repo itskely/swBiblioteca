@@ -6,3 +6,6 @@
 *.sln.docstates
 *.vsdx
 *.json
+swBiblioteca/swBiblioteca/bin/Debug/net10.0-windows/pt-BR/Microsoft.Data.SqlClient.resources.dll
+swBiblioteca/swBiblioteca/bin/Debug/net10.0-windows/pl/Microsoft.Data.SqlClient.resources.dll
+*.dll
