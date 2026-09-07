@@ -70,7 +70,7 @@
             pnlTitulo.Dock = DockStyle.Top;
             pnlTitulo.Location = new Point(0, 0);
             pnlTitulo.Name = "pnlTitulo";
-            pnlTitulo.Size = new Size(1604, 69);
+            pnlTitulo.Size = new Size(1348, 69);
             pnlTitulo.TabIndex = 0;
             // 
             // lblTitulo
@@ -93,7 +93,7 @@
             pnlBusqueda.Dock = DockStyle.Top;
             pnlBusqueda.Location = new Point(0, 69);
             pnlBusqueda.Name = "pnlBusqueda";
-            pnlBusqueda.Size = new Size(1604, 63);
+            pnlBusqueda.Size = new Size(1348, 63);
             pnlBusqueda.TabIndex = 1;
             // 
             // btnBuscar
@@ -147,7 +147,7 @@
             pnlDatos.Dock = DockStyle.Top;
             pnlDatos.Location = new Point(0, 132);
             pnlDatos.Name = "pnlDatos";
-            pnlDatos.Size = new Size(1604, 351);
+            pnlDatos.Size = new Size(1348, 351);
             pnlDatos.TabIndex = 2;
             // 
             // cmbEditorial
@@ -377,7 +377,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1604, 829);
+            ClientSize = new Size(1348, 875);
             Controls.Add(dgvlibros);
             Controls.Add(pnlDatos);
             Controls.Add(pnlBusqueda);

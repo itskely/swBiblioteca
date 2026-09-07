@@ -259,10 +259,10 @@ namespace swBiblioteca
                     return;
                 }
 
-                if (!int.TryParse(txtExistencias.Text, out existencias))
+                if (!int.TryParse(txtExistencias.Text, out existencias) || existencias < 0)
                 {
                     MessageBox.Show(
-                        "Las existencias deben ser un número entero.",
+                        "Las existencias deben ser un número entero mayor o igual a 0.",
                         "Biblioteca",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
@@ -276,20 +276,68 @@ namespace swBiblioteca
                 {
                     cn.Open();
 
-                    string consulta = @"INSERT INTO Libros
-                                (ISBN, Titulo, IdAutor, IdEditorial, Categoria, Anio, Existencias)
-                                VALUES
-                                (@ISBN, @Titulo, @IdAutor, @IdEditorial, @Categoria, @Anio, @Existencias)";
+                    // COMPROBAR SI EL ISBN YA EXISTE
+                    string consultaExiste =
+                        "SELECT COUNT(*) FROM Libros WHERE ISBN = @ISBN";
 
-                    using (SqlCommand comando = new SqlCommand(consulta, cn))
+                    using (SqlCommand comandoExiste =
+                           new SqlCommand(consultaExiste, cn))
                     {
-                        comando.Parameters.AddWithValue("@ISBN", txtISBN.Text.Trim());
-                        comando.Parameters.AddWithValue("@Titulo", txtTitulo.Text.Trim());
-                        comando.Parameters.AddWithValue("@IdAutor", Convert.ToInt32(cmbAutor.SelectedValue));
-                        comando.Parameters.AddWithValue("@IdEditorial", Convert.ToInt32(cmbEditorial.SelectedValue));
-                        comando.Parameters.AddWithValue("@Categoria", txtCategoria.Text.Trim());
-                        comando.Parameters.AddWithValue("@Anio", anio);
-                        comando.Parameters.AddWithValue("@Existencias", existencias);
+                        comandoExiste.Parameters.AddWithValue(
+                            "@ISBN",
+                            txtISBN.Text.Trim());
+
+                        int cantidad =
+                            Convert.ToInt32(comandoExiste.ExecuteScalar());
+
+                        if (cantidad > 0)
+                        {
+                            MessageBox.Show(
+                                "Ya existe un libro registrado con ese ISBN.",
+                                "Biblioteca",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+
+                            return;
+                        }
+                    }
+
+                    // INSERTAR EL LIBRO
+                    string consulta = @"INSERT INTO Libros
+                        (ISBN, Titulo, IdAutor, IdEditorial, Categoria, Anio, Existencias)
+                        VALUES
+                        (@ISBN, @Titulo, @IdAutor, @IdEditorial, @Categoria, @Anio, @Existencias)";
+
+                    using (SqlCommand comando =
+                           new SqlCommand(consulta, cn))
+                    {
+                        comando.Parameters.AddWithValue(
+                            "@ISBN",
+                            txtISBN.Text.Trim());
+
+                        comando.Parameters.AddWithValue(
+                            "@Titulo",
+                            txtTitulo.Text.Trim());
+
+                        comando.Parameters.AddWithValue(
+                            "@IdAutor",
+                            Convert.ToInt32(cmbAutor.SelectedValue));
+
+                        comando.Parameters.AddWithValue(
+                            "@IdEditorial",
+                            Convert.ToInt32(cmbEditorial.SelectedValue));
+
+                        comando.Parameters.AddWithValue(
+                            "@Categoria",
+                            txtCategoria.Text.Trim());
+
+                        comando.Parameters.AddWithValue(
+                            "@Anio",
+                            anio);
+
+                        comando.Parameters.AddWithValue(
+                            "@Existencias",
+                            existencias);
 
                         comando.ExecuteNonQuery();
                     }
