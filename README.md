@@ -185,7 +185,7 @@ Permitir consultar:
 ---
 ## 6.Modelo entidad-relación
 
-![Análisis de la base de datos](Analisis BD.png)
+![Análisis de la base de datos](Analisis%20BD.png)
 ---
 ## 7.Diccionario de datos
 
