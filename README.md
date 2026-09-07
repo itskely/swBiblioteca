@@ -1,19 +1,35 @@
 # SISTEMA DE GESTION DE BIBLIOTECA
 
 ## Portada
--**Nombre del proyecto:** Sistema de gestion de Biblioteca(swBiblioteca)
--**Docente:** Veronica Castro
--**Integrante:** Kely Yohana Quilindo Hernandez 
--**Asignatura:** programacin avanzada
--**codigo:** 53304
--**Fecha:** Septiembre 2026
+
+**Nombre del proyecto:** Sistema de gestion de Biblioteca(swBiblioteca)
+
+
+**Docente:** Veronica Castro
+
+
+**Integrante:** Kely Yohana Quilindo Hernandez
+
+
+**Asignatura:** programacin avanzada
+
+
+**codigo:** 53304
+
+
+**Fecha:** Septiembre 2026
 
 ---
 
 ## Contraporda 
--** Sistema de gestion de biblioteca **
--** Institucion: ** Corporación Unificada Nacional de Educación Superior CUN.
--**Carrera:** Ingenieria de sistemas.
+
+** Sistema de gestion de biblioteca **
+
+
+** Institucion: ** Corporación Unificada Nacional de Educación Superior CUN.
+
+
+**Carrera:** Ingenieria de sistemas.
 
 ---
 
