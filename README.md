@@ -1,19 +1,19 @@
 # SISTEMA DE GESTION DE BIBLIOTECA
 
 ## Portada
-**Nombre del proyecto:** Sistema de gestion de Biblioteca(swBiblioteca)
-**Docente:**
-**Integrante:**Kely Yohana Quilindo Hernandez 
-**Asignatura:**programacin avanzada
-**codigo:**53304
-**Fecha:**Septiembre 2026
+-**Nombre del proyecto:** Sistema de gestion de Biblioteca(swBiblioteca)
+-**Docente:** Veronica Castro
+-**Integrante:** Kely Yohana Quilindo Hernandez 
+-**Asignatura:** programacin avanzada
+-**codigo:** 53304
+-**Fecha:** Septiembre 2026
 
 ---
 
 ## Contraporda 
-**Sistema de gestion de biblioteca **
-**Institucion:**Corporación Unificada Nacional de Educación Superior CUN 
-**Carrera:**Ingenieria de sistemas
+-** Sistema de gestion de biblioteca **
+-** Institucion: ** Corporación Unificada Nacional de Educación Superior CUN.
+-**Carrera:** Ingenieria de sistemas.
 
 ---
 
@@ -23,6 +23,7 @@ en formato de escritorio, diseñado para automatizar la administración de libro
 estudiantes y el control de préstamos en una institución educativa. La solución se 
 construyó utilizando el lenguaje C# y el motor de bases de datos SQL Server, 
 aplicando los principios de la Programación Orientada a Objetos (POO).
+
 A lo largo del informe se exponen el planteamiento del problema, los requerimientos del software, 
 los diagramas demodelado (clases, casos de uso y entidad-relación), el diccionario de datos y la arquitectura 
 técnica del sistema, ofreciendo una visión integral del proyecto desarrollado.
@@ -30,6 +31,8 @@ técnica del sistema, ofreciendo una visión integral del proyecto desarrollado.
 ---
 
 ## 2.Objetivos
+
+
 ## Objetivo general
 
 Desarrollar una aplicación de escritorio utilizando C# y SQL Server que permita
@@ -65,6 +68,8 @@ ___
 ## 4.Análisis De Requerimientos
 
 RF01. Gestión de Libros
+
+
 El sistema deberá permitir:
 - Registrar libros.
 - Consultar libros.
@@ -76,9 +81,15 @@ El sistema deberá permitir:
 - Autor
 - Categoría
 - Mostrar disponibilidad del libro.
+
+
 RF02. Gestión de Autores
+
+
 El sistema deberá permitir:
 Registrar autores.
+
+
 Cada autor deberá almacenar:
 
 - Código
@@ -86,7 +97,11 @@ Cada autor deberá almacenar:
 - Apellidos
 - Nacionalidad
 - Fecha de nacimiento
+
+
 RF03. Gestión de Categorías
+
+
 Permitir administrar categorías como:
 - Programación
 - Bases de datos
@@ -95,7 +110,11 @@ Permitir administrar categorías como:
 - Electrónica
 - Inteligencia Artificial
 - Otros
+
+
 RF04. Gestión de Usuarios
+
+
 Registrar los usuarios de la biblioteca.
 Información mínima:
 - Documento
@@ -104,21 +123,33 @@ Información mínima:
 - Teléfono
 - Correo electrónico
 - Programa académico
+
+
 RF05. Gestión de Préstamos
+
+
 Permitir registrar préstamos.
-Aca – Programación Avanzada
+
 Debe almacenar:
 - Usuario
 - Libro
 - Fecha préstamo
 - Fecha devolución esperada
 - Estado
+
+
 RF06. Gestión de Devoluciones
+
+
 Registrar la devolución del libro.
 Actualizar automáticamente:
 - Disponibilidad
 - Estado del préstamo
+
+
 RF07. Consultas
+
+
 Permitir consultar:
 - Libros disponibles.
 - Libros prestados.
