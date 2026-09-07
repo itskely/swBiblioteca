@@ -23,10 +23,10 @@
 
 ## Contraporda 
 
-** Sistema de gestion de biblioteca **
+**Sistema de gestion de biblioteca**
 
 
-** Institucion: ** Corporación Unificada Nacional de Educación Superior CUN.
+**Institucion:** Corporación Unificada Nacional de Educación Superior CUN.
 
 
 **Carrera:** Ingenieria de sistemas.
@@ -185,7 +185,7 @@ Permitir consultar:
 ---
 ## 6.Modelo entidad-relación
 
-
+![Análisis de la base de datos](Analisis BD.png)
 ---
 ## 7.Diccionario de datos
 
@@ -199,4 +199,3 @@ Permitir consultar:
 
 ---
 
-## 10.
