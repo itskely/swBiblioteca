@@ -305,6 +305,11 @@ namespace swBiblioteca
 
         private void FrmAutores_Load_1(object sender, EventArgs e)
         {
+            CargarAutores();
+        }
+
+        private void dgvPrestamos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

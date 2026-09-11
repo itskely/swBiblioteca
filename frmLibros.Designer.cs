@@ -82,7 +82,7 @@
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(313, 41);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "GESTION DE LIBROS ";
+            lblTitulo.Text = "GESTIÓN DE LIBROS ";
             // 
             // pnlBusqueda
             // 
@@ -366,11 +366,15 @@
             // 
             // dgvlibros
             // 
+            dgvlibros.AllowUserToAddRows = false;
             dgvlibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvlibros.Location = new Point(107, 506);
+            dgvlibros.Dock = DockStyle.Fill;
+            dgvlibros.Location = new Point(0, 483);
             dgvlibros.Name = "dgvlibros";
+            dgvlibros.ReadOnly = true;
             dgvlibros.RowHeadersWidth = 51;
-            dgvlibros.Size = new Size(958, 152);
+            dgvlibros.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvlibros.Size = new Size(1348, 392);
             dgvlibros.TabIndex = 9;
             // 
             // frmLibros

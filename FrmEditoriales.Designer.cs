@@ -61,11 +61,11 @@
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(448, 9);
+            lblTitulo.Location = new Point(215, 9);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(388, 41);
             lblTitulo.TabIndex = 1;
-            lblTitulo.Text = "GESTION DE EDITORIALES";
+            lblTitulo.Text = "GESTIÓN DE EDITORIALES";
             // 
             // pnlDatos
             // 
@@ -91,7 +91,7 @@
             btnCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
             btnCancelar.IconColor = Color.Black;
             btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnCancelar.Location = new Point(872, 222);
+            btnCancelar.Location = new Point(621, 213);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(118, 33);
             btnCancelar.TabIndex = 8;
@@ -107,7 +107,7 @@
             btnEliminar.IconChar = FontAwesome.Sharp.IconChar.None;
             btnEliminar.IconColor = Color.Black;
             btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEliminar.Location = new Point(736, 222);
+            btnEliminar.Location = new Point(485, 213);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(118, 33);
             btnEliminar.TabIndex = 7;
@@ -123,7 +123,7 @@
             btnEditar.IconChar = FontAwesome.Sharp.IconChar.None;
             btnEditar.IconColor = Color.Black;
             btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEditar.Location = new Point(606, 222);
+            btnEditar.Location = new Point(355, 213);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(118, 33);
             btnEditar.TabIndex = 6;
@@ -139,7 +139,7 @@
             btnGuardar.IconChar = FontAwesome.Sharp.IconChar.None;
             btnGuardar.IconColor = Color.Black;
             btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnGuardar.Location = new Point(473, 222);
+            btnGuardar.Location = new Point(222, 213);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(118, 33);
             btnGuardar.TabIndex = 5;
@@ -155,7 +155,7 @@
             btnNuevo.IconChar = FontAwesome.Sharp.IconChar.None;
             btnNuevo.IconColor = Color.Black;
             btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnNuevo.Location = new Point(338, 222);
+            btnNuevo.Location = new Point(87, 213);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(118, 33);
             btnNuevo.TabIndex = 4;
@@ -165,7 +165,7 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(615, 84);
+            txtNombre.Location = new Point(232, 61);
             txtNombre.MaxLength = 100;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(239, 27);
@@ -174,10 +174,10 @@
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(487, 88);
+            lblNombre.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNombre.Location = new Point(104, 65);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(81, 23);
+            lblNombre.Size = new Size(77, 23);
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Nombre:";
             // 

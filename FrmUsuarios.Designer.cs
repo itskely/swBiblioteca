@@ -71,11 +71,11 @@
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(448, 9);
+            lblTitulo.Location = new Point(245, 9);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(352, 41);
             lblTitulo.TabIndex = 1;
-            lblTitulo.Text = "GESTION DE USUARIOS";
+            lblTitulo.Text = "GESTIÓN DE USUARIOS";
             // 
             // pnlDatos
             // 
@@ -100,7 +100,7 @@
             // 
             lblCorreo.AutoSize = true;
             lblCorreo.Font = new Font("Segoe UI", 10.2F);
-            lblCorreo.Location = new Point(370, 194);
+            lblCorreo.Location = new Point(94, 174);
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(66, 23);
             lblCorreo.TabIndex = 20;
@@ -108,14 +108,14 @@
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(521, 155);
+            txtTelefono.Location = new Point(245, 135);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(368, 27);
             txtTelefono.TabIndex = 19;
             // 
             // txtDocumento
             // 
-            txtDocumento.Location = new Point(521, 122);
+            txtDocumento.Location = new Point(245, 102);
             txtDocumento.Name = "txtDocumento";
             txtDocumento.Size = new Size(368, 27);
             txtDocumento.TabIndex = 18;
@@ -127,7 +127,7 @@
             pnlbotones.Controls.Add(btnEditar);
             pnlbotones.Controls.Add(btnGuardar);
             pnlbotones.Controls.Add(btnNuevo);
-            pnlbotones.Location = new Point(279, 258);
+            pnlbotones.Location = new Point(94, 249);
             pnlbotones.Name = "pnlbotones";
             pnlbotones.Size = new Size(649, 61);
             pnlbotones.TabIndex = 8;
@@ -214,21 +214,21 @@
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(521, 190);
+            txtCorreo.Location = new Point(245, 170);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(368, 27);
             txtCorreo.TabIndex = 13;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(521, 79);
+            txtApellido.Location = new Point(245, 59);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(368, 27);
             txtApellido.TabIndex = 10;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(521, 43);
+            txtNombre.Location = new Point(245, 23);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(368, 27);
             txtNombre.TabIndex = 9;
@@ -237,7 +237,7 @@
             // 
             lblTelefono.AutoSize = true;
             lblTelefono.Font = new Font("Segoe UI", 10.2F);
-            lblTelefono.Location = new Point(370, 165);
+            lblTelefono.Location = new Point(94, 145);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(78, 23);
             lblTelefono.TabIndex = 4;
@@ -247,7 +247,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI", 10.2F);
-            lblNombre.Location = new Point(370, 51);
+            lblNombre.Location = new Point(94, 31);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(77, 23);
             lblNombre.TabIndex = 3;
@@ -257,7 +257,7 @@
             // 
             lblApellido.AutoSize = true;
             lblApellido.Font = new Font("Segoe UI", 10.2F);
-            lblApellido.Location = new Point(370, 87);
+            lblApellido.Location = new Point(94, 67);
             lblApellido.Name = "lblApellido";
             lblApellido.Size = new Size(76, 23);
             lblApellido.TabIndex = 2;
@@ -267,7 +267,7 @@
             // 
             lblDocumento.AutoSize = true;
             lblDocumento.Font = new Font("Segoe UI", 10.2F);
-            lblDocumento.Location = new Point(370, 127);
+            lblDocumento.Location = new Point(94, 107);
             lblDocumento.Name = "lblDocumento";
             lblDocumento.Size = new Size(104, 23);
             lblDocumento.TabIndex = 1;

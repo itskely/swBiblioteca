@@ -45,9 +45,15 @@
             pnlSuperior = new Panel();
             pnlEstado = new Panel();
             pnlCcontenido = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            pnltexto = new Panel();
             pnlMenu.SuspendLayout();
             pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
+            pnlSuperior.SuspendLayout();
+            pnlCcontenido.SuspendLayout();
+            pnltexto.SuspendLayout();
             SuspendLayout();
             // 
             // pnlMenu
@@ -261,7 +267,7 @@
             lblSubtitulo.Name = "lblSubtitulo";
             lblSubtitulo.Size = new Size(142, 20);
             lblSubtitulo.TabIndex = 1;
-            lblSubtitulo.Text = "Sistema De Gestion ";
+            lblSubtitulo.Text = "Sistema De Gestión ";
             lblSubtitulo.Click += lblSubtitulo_Click;
             // 
             // lblTitulo
@@ -279,6 +285,7 @@
             // pnlSuperior
             // 
             pnlSuperior.BackColor = Color.LightBlue;
+            pnlSuperior.Controls.Add(label1);
             pnlSuperior.Dock = DockStyle.Top;
             pnlSuperior.Location = new Point(244, 0);
             pnlSuperior.Name = "pnlSuperior";
@@ -297,12 +304,43 @@
             // pnlCcontenido
             // 
             pnlCcontenido.BackColor = SystemColors.ControlLight;
+            pnlCcontenido.Controls.Add(pnltexto);
             pnlCcontenido.Dock = DockStyle.Fill;
             pnlCcontenido.Font = new Font("Segoe UI Black", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             pnlCcontenido.Location = new Point(244, 90);
             pnlCcontenido.Name = "pnlCcontenido";
             pnlCcontenido.Size = new Size(1104, 581);
             pnlCcontenido.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("MV Boli", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(134, 40);
+            label1.Name = "label1";
+            label1.Size = new Size(645, 45);
+            label1.TabIndex = 1;
+            label1.Text = "¡Bienvenido al Sistema de Biblioteca!";
+            label1.Click += label1_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(41, 47);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 23);
+            label2.TabIndex = 0;
+            // 
+            // pnltexto
+            // 
+            pnltexto.Controls.Add(label2);
+            pnltexto.Dock = DockStyle.Top;
+            pnltexto.Location = new Point(69, 34);
+            pnltexto.Name = "pnltexto";
+            pnltexto.Size = new Size(124, 72);
+            pnltexto.TabIndex = 1;
             // 
             // FrmPrincipal
             // 
@@ -322,6 +360,11 @@
             pnlLogo.ResumeLayout(false);
             pnlLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
+            pnlSuperior.ResumeLayout(false);
+            pnlSuperior.PerformLayout();
+            pnlCcontenido.ResumeLayout(false);
+            pnltexto.ResumeLayout(false);
+            pnltexto.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -343,5 +386,8 @@
         private FontAwesome.Sharp.IconButton btnEditoriales;
         private FontAwesome.Sharp.IconButton btnAutores;
         private FontAwesome.Sharp.IconButton btnUsuarios;
+        private Label label1;
+        private Panel pnltexto;
+        private Label label2;
     }
 }

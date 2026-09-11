@@ -7,8 +7,8 @@ namespace swBiblioteca
         public FrmPrincipal()
         {
             InitializeComponent();
-             
-           AbrirFormulario(new FrmInicio());
+
+            AbrirFormulario(new FrmInicio());
         }
 
 
@@ -62,6 +62,11 @@ namespace swBiblioteca
         }
 
         private void imgLogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
