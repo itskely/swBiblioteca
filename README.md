@@ -631,7 +631,7 @@ Usa el código con precaución.
 
 ## Anexo A. Repositorio GitHub
 
-**Repositorio:** [Enlace al repositorio]()
+**Repositorio:** [Enlace al repositorio](https://github.com/itskely/swBiblioteca)
 
 ## Anexo B. Script de base de datos
 
