@@ -147,6 +147,8 @@ El sistema permitirá:
 
 # 4. ANÁLISIS DE REQUERIMIENTOS
 
+![Analisis de requerimientos](Requerimientos.png)
+
 ## 4.1 Descripción general
 
 El Sistema de Gestión de Biblioteca permitirá administrar la información de libros,
@@ -274,27 +276,19 @@ actualizarse.
 Al registrar una devolución, la disponibilidad deberá actualizarse
 nuevamente.
 
-### RN08 -- Multa
 
-La multa se calculará únicamente cuando exista retraso en la devolución.
 
 
 ------------------------------------------------------------------------
 
 # 5. CASOS DE USO
 
-## 5.1 Descripción
-
-Describir cómo interactúan los actores con las funcionalidades
-principales del sistema.
-
-## 5.2 Diagrama de casos de uso
 
 
 
-`![Diagrama de casos de uso](Diagrama De Casos De Uso - Biblioteca .png)`
+![Diagrama de casos de uso](Usos.png)
 
-## 5.3 Descripción de casos de uso
+##  Descripción de casos de uso
 
 ### CU01 -- Gestionar libros
 
@@ -355,28 +349,19 @@ a estar disponible según corresponda.
 
 # 6. DIAGRAMA DE CLASES
 
-## 6.1 Descripción
 
-Describir las principales clases utilizadas en el sistema y su
-responsabilidad.
+![Diagrama de clases](Clases.png)
 
-## 6.2 Diagrama de clases
-
-Insertar aquí el diagrama de clases.
-
-`![Diagrama de clases](Diagrama De Clases - Biblioteca .png)`
-
-## 6.3 Principales clases
+## Principales clases
 
   Clase             Responsabilidad
   ----------------- --------------------------------------------------------
   Libro             Representar y gestionar la información de los libros.
   Autor             Representar y gestionar los autores.
-  Categoria         Representar las categorías de los libros.
-  Usuario           Representar los usuarios de la biblioteca.
+  Usuarios          Representar los usuarios de la biblioteca.
+  Editoriales       Representar las editoriales de los libros.
   Prestamo          Gestionar la información de los préstamos.
-  DetallePrestamo   Relacionar los libros incluidos en un préstamo.
-  Devolucion        Gestionar las devoluciones y calcular retrasos/multas.
+  Reportes		    Generar informes sobre préstamos, devoluciones y disponibilidad.
  
 ## 6.4 Aplicación de POO
 
@@ -405,7 +390,7 @@ bien definidas.
 
 
 
-`![Modelo entidad-relación](Analisis BD.png)`
+![Modelo entidad-relación](Analisis%20BD.png)
 
 ## 7.3 Relaciones principales
 
@@ -419,119 +404,11 @@ A continuación se describen las relaciones e integridad referencial establecida
 
 # 8. DICCIONARIO DE DATOS
 
-`![Diccionario de datos](Diccionario De Datos - Biblioteca .png)`
-
-## 8.1 Convenciones
-
-  Abreviatura   Significado
-  ------------- -----------------------------
-  PK            Clave primaria
-  FK            Clave foránea
-  UQ            Campo con valor único
-  NULL          Campo que puede estar vacío
-  NOT NULL      Campo obligatorio
-
-## 8.2 Tabla: Autor
-
-  Campo             Tipo de dato   Clave   Nulo   Descripción
-  ----------------- -------------- ------- ------ --------------------------------
-  idAutor           INT            PK      No     Identificador único del autor.
-  nombre            VARCHAR(100)   \-      No     Nombre del autor.
-  apellidos         VARCHAR(100)   \-      No     Apellidos del autor.
-  nacionalidad      VARCHAR(50)    \-      Sí     Nacionalidad del autor.
-  fechaNacimiento   DATE           \-      Sí     Fecha de nacimiento.
-
-## 8.3 Tabla: Categoria
-
-  Campo         Tipo de dato   Clave   Nulo   Descripción
-  ------------- -------------- ------- ------ --------------------------------------
-  idCategoria   INT            PK      No     Identificador único de la categoría.
-  nombre        VARCHAR(50)    UQ      No     Nombre de la categoría.
-  descripcion   VARCHAR(200)   \-      Sí     Descripción de la categoría.
-
-## 8.4 Tabla: Libro
-
-  Campo             Tipo de dato   Clave   Nulo   Descripción
-  ----------------- -------------- ------- ------ -----------------------------------
-  idLibro           INT            PK      No     Identificador único del libro.
-  codigo            VARCHAR(20)    UQ      No     Código único del libro.
-  titulo            VARCHAR(200)   \-      No     Título del libro.
-  anioPublicacion   INT            \-      Sí     Año de publicación.
-  idAutor           INT            FK      No     Autor asociado al libro.
-  idCategoria       INT            FK      No     Categoría del libro.
-  cantidad          INT            \-      No     Cantidad de ejemplares.
-  estado            VARCHAR(20)    \-      No     Estado del libro.
-  sinopsis          VARCHAR(500)   \-      Sí     Descripción o sinopsis del libro.
-
-## 8.5 Tabla: Usuario
-
-  Campo             Tipo de dato   Clave   Nulo   Descripción
-  ----------------- -------------- ------- ------ ----------------------------------
-  idUsuario         INT            PK      No     Identificador único del usuario.
-  documento         VARCHAR(20)    UQ      No     Número de documento.
-  tipoDocumento     VARCHAR(20)    \-      No     Tipo de documento.
-  nombre            VARCHAR(100)   \-      No     Nombre del usuario.
-  apellidos         VARCHAR(100)   \-      No     Apellidos del usuario.
-  direccion         VARCHAR(150)   \-      Sí     Dirección del usuario.
-  telefono          VARCHAR(20)    \-      Sí     Teléfono de contacto.
-  correo            VARCHAR(100)   \-      Sí     Correo electrónico.
-  fechaNacimiento   DATE           \-      Sí     Fecha de nacimiento.
-  estado            VARCHAR(20)    \-      No     Estado del usuario.
-
-## 8.6 Tabla: Prestamo
-
-  Campo           Tipo de dato   Clave   Nulo   Descripción
-  --------------- -------------- ------- ------ -----------------------------------
-  idPrestamo      INT            PK      No     Identificador único del préstamo.
-  idUsuario       INT            FK      No     Usuario que realiza el préstamo.
-  fechaPrestamo   DATETIME       \-      No     Fecha del préstamo.
-  estado          VARCHAR(20)    \-      No     Estado del préstamo.
-
-## 8.7 Tabla: DetallePrestamo
-
-  ---------------------------------------------------------------------------------------
-  Campo                     Tipo de dato    Clave          Nulo           Descripción
-  ------------------------- --------------- -------------- -------------- ---------------
-  idDetalle                 INT             PK             No             Identificador
-                                                                          único del
-                                                                          detalle.
-
-  idPrestamo                INT             FK             No             Préstamo al que
-                                                                          pertenece.
-
-  idLibro                   INT             FK             No             Libro prestado.
-
-  fechaDevolucionEstimada   DATE            \-             No             Fecha estimada
-                                                                          de devolución.
-
-  fechaDevolucionReal       DATE            \-             Sí             Fecha real de
-                                                                          devolución.
-
-  valor                     DECIMAL(10,2)   \-             No             Valor asociado
-                                                                          al préstamo, si
-                                                                          aplica.
-
-  multa                     DECIMAL(10,2)   \-             Sí             Valor de la
-                                                                          multa generada.
-
-  estado                    VARCHAR(20)     \-             No             Estado del
-                                                                          detalle.
-
-  ---------------------------------------------------------------------------------------
-
-## 8.8 Tabla: Devolucion
-
-  Campo             Tipo de dato    Clave   Nulo   Descripción
-  ----------------- --------------- ------- ------ ---------------------------------------
-  idDevolucion      INT             PK      No     Identificador único de la devolución.
-  idDetalle         INT             FK      No     Detalle del préstamo devuelto.
-  fechaDevolucion   DATETIME        \-      No     Fecha de devolución.
-  diasRetraso       INT             \-      No     Número de días de retraso.
-  multa             DECIMAL(10,2)   \-      Sí     Valor de la multa, si aplica.
+![Diccionario de datos](Diccionario.png)
 
 
 
-------------------------------------------------------------------------
+
 
 # 9. ARQUITECTURA DEL SISTEMA
 
@@ -553,7 +430,7 @@ La arquitectura está compuesta por:
 
 
 
-`![Arquitectura del sistema](Arquitectura Del Sistema.png)`
+![Arquitectura del sistema](Arquitectura.png)
 
 ## 9.3 Capa de Presentación
 
@@ -566,10 +443,10 @@ Es la capa mediante la cual el usuario interactúa con el sistema.
 -   FrmPrincipal
 -   FrmLibros
 -   FrmAutores
--   FrmCategorias
+-   FrmEditoriales
 -   FrmUsuarios
 -   FrmPrestamos
--   FrmDevoluciones
+-   FrmReportes
 
 **Tecnología utilizada:**
 
@@ -599,47 +476,13 @@ de negocio y coordina las operaciones.
 -   Validar existencia del usuario.
 -   Validar existencia del libro.
 -   Calcular días de retraso.
--   Calcular multa.
 -   Actualizar estados.
 
-## 9.5 Capa de Acceso a Datos
 
-**Responsabilidad:**
 
-Gestiona la comunicación entre la aplicación y SQL Server.
 
-**Componentes:**
 
--   Conexion
--   LibroDAO
--   AutorDAO
--   CategoriaDAO
--   UsuarioDAO
--   PrestamoDAO
--   DevolucionDAO
-
-**Tecnologías utilizadas:**
-
--   SQL Server.
--   Consultas parametrizadas.
-
-## 9.6 Capa de Base de Datos
-
-La información del sistema se almacena en:
-
-**Base de datos:** `[swBiblioteca]`
-
-**Tablas principales:**
-
--   Autor
--   Categoria
--   Libro
--   Usuario
--   Prestamo
--   DetallePrestamo
--   Devolucion
-
-## 9.7 Flujo de información
+## Flujo de información
 
 ``` text
 Usuario
@@ -681,223 +524,125 @@ de préstamos.
    * *Eliminar:* Remueve del catálogo activo el registro del libro seleccionado, restringiendo la acción si el ejemplar cuenta con dependencias activas o préstamos en curso.
    * *Cancelar:* Revierte cualquier acción en proceso, bloqueando nuevamente las cajas de texto y limpiando el formulario para prevenir modificaciones accidentales.
 **Validaciones:**
-`![Modulo de libros](libros.PNG)`
+![Modulo de libros](libros.PNG)
 ## 10.2 Módulo de autores
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Este módulo proporciona la interfaz gráfica necesaria para que el administrador o bibliotecario
+gestione de manera integral el catálogo de autores de la biblioteca. Permite realizar el ciclo
+completo de mantenimiento de datos (CRUD) sobre la entidad Autor, asegurando el control preciso de sus identificadores y nombres antes de ser vinculados con sus respectivas obras en el sistema.
 
-**Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
+**Funcionalidades:** 1. *•Consulta y Visualización de Catálogo:•* 
+   * Cuenta con un componente de rejilla de datos (DataGridView) que despliega de forma inmediata el listado de los autores con su ID, Nombre y Apellido.
+2. *•Operaciones de Mantenimiento (CRUD):•*
+   * *•Nuevo / Guardar:•* Habilita los campos del formulario para realizar el registro y almacenamiento permanente de un nuevo autor en la base de datos.
+   * *•Editar:•* Permite la modificación de los atributos de un autor existente seleccionado en la tabla.
+   * *•Eliminar:•* Remueve del catálogo activo el registro del autor seleccionado.
+   * *•Cancelar:•* Revierte cualquier acción en proceso, bloqueando nuevamente los campos de captura y limpiando el formulario.
+**Validaciones:**
+![Modulo de autores](Autores.PNG)
 
-## 10.3 Módulo de categorías
 
-**Objetivo:** \[Descripción.\]
 
-**Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
+## 10.3 Módulo de usuarios
 
-## 10.4 Módulo de usuarios
+*•Objetivo:•* Este módulo proporciona la interfaz gráfica necesaria para que el administrador o bibliotecario gestione de manera integral el registro de los usuarios de la biblioteca. Permite realizar el ciclo completo de mantenimiento de datos (CRUD) sobre la entidad Usuario, asegurando el control preciso de sus datos personales y de contacto antes de habilitar transacciones como la asignación de préstamos en el sistema.
 
-**Objetivo:** \[Descripción.\]
+*•Funcionalidades:•* 
+1. *•Consulta y Visualización de Catálogo:•* 
+   * Cuenta con un componente de rejilla de datos (DataGridView) que despliega de forma inmediata el listado de los usuarios registrados mostrando su IdUsuario, Nombre, Apellido, Documento y Teléfono.
+2. *•Operaciones de Mantenimiento (CRUD):•*
+   * *•Nuevo / Guardar:•* Habilita los campos del formulario para realizar el registro y almacenamiento permanente de un nuevo usuario con sus datos esenciales (Nombre, Apellido, Documento, Teléfono y Correo) en la base de datos.
+   * *•Editar:•* Permite la modificación de los atributos o datos de contacto de un usuario existente seleccionado en la tabla.
+   * *•Eliminar:•* Remueve del catálogo activo el registro del usuario seleccionado.
+   * *•Cancelar:•* Revierte cualquier acción en proceso, bloqueando nuevamente los campos de captura y limpiando el formulario.
 
-**Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
+![Módulo de usuarios](Usuarios.PNG)
+
+## 10.4 Módulo de editoriales
+
+*•Objetivo:•* Este módulo proporciona la interfaz gráfica necesaria para que el administrador o bibliotecario gestione de manera integral el catálogo de las  editoras de la biblioteca. Permite realizar el ciclo completo de mantenimiento de datos (CRUD) sobre la entidad Editorial, asegurando el control y clasificación de los nombres de los sellos editoriales antes de asociarlos a las obras literarias en el sistema.
+
+*•Funcionalidades:•* 
+1. *•Consulta y Visualización de Catálogo:•* 
+   * Cuenta con un componente de rejilla de datos (DataGridView) que despliega de forma inmediata el listado de las editoriales registradas mostrando su IdEditorial y Nombre.
+2. *•Operaciones de Mantenimiento (CRUD):•*
+   * *•Nuevo / Guardar:•* Habilita el campo del formulario para realizar el registro y almacenamiento permanente de una nueva casa editora (Nombre) en la base de datos.
+   * *•Editar:•* Permite la modificación del nombre de una editorial existente seleccionada en la tabla.
+   * *•Eliminar:•* Remueve del catálogo activo el registro de la editorial seleccionada.
+   * *•Cancelar:•* Revierte cualquier acción en proceso, bloqueando nuevamente el campo de captura y limpiando el formulario.
+
+![Módulo de editoriales](Editoriales.PNG)
 
 ## 10.5 Módulo de préstamos
 
-**Objetivo:** \[Descripción.\]
+*•Objetivo:•* Este módulo proporciona la interfaz gráfica necesaria para que el administrador o bibliotecario gestione de manera integral las transacciones de salida y retorno de material bibliográfico. Permite realizar el ciclo completo de mantenimiento de datos (CRUD) sobre la entidad Préstamo, vinculando dinámicamente a los usuarios con los libros solicitados y controlando estrictamente los plazos y las fechas de devolución en el sistema.
 
-**Funcionalidades:** - Registrar préstamo. - Consultar préstamos
-activos. - Consultar historial. - Actualizar disponibilidad.
+*•Funcionalidades:•* 
+1. *•Consulta y Visualización de Catálogo:•* 
+   * Cuenta con un componente de rejilla de datos (DataGridView) que despliega de forma inmediata el historial y estado de las transacciones mostrando su IdPrestamo, IdUsuario, ISBN, FechaPrestamo y FechaDevolucion.
+2. *•Operaciones de Mantenimiento (CRUD):•*
+   * *•Nuevo / Guardar:•* Habilita los controles del formulario (selectores y componentes de fecha) para registrar un nuevo préstamo en la base de datos, asociando un usuario y un libro con sus respectivas fechas de salida y retorno sugerida.
+   * *•Editar:•* Permite la modificación o actualización de las fechas y datos de una transacción de préstamo existente seleccionada en la tabla.
+   * *•Eliminar:•* Remueve del historial activo el registro del préstamo seleccionado.
+   * *•Cancelar:•* Revierte cualquier acción en proceso, bloqueando nuevamente los campos de captura y limpiando el formulario.
 
-## 10.6 Módulo de devoluciones
+![Módulo de préstamos](Prestamos.PNG)
 
-**Objetivo:** \[Descripción.\]
+## 10.6 Módulo de Reportes
 
-**Funcionalidades:** - Registrar devolución. - Calcular días de
-retraso. - Calcular multa cuando aplique. - Actualizar disponibilidad.
+*•Objetivo:•* Este módulo proporciona la interfaz gráfica necesaria para que el administrador o bibliotecario genere informes detallados sobre los movimientos y el estado del inventario de la biblioteca. Permite la filtración y extracción de datos clave consolidados, facilitando la toma de decisiones y el seguimiento del flujo de libros y transacciones en el sistema.
 
-## 10.7 Módulo de consultas
+*•Funcionalidades:•* 
+1. *•Consulta y Visualización de Catálogo:•* 
+   * Cuenta con un componente de rejilla de datos (DataGridView) que despliega los resultados de la consulta generada, mostrando información relevante como IdPrestamo, Usuario, ISBN, Título, FechaPrestamo y FechaDevolucion.
+2. *•Operaciones de Control y Filtrado:•*
+   * *•Selección de Tipo de Reporte:•* Incorpora un menú desplegable (ComboBox) que permite elegir el criterio de filtrado de los datos (por ejemplo, "Préstamos devueltos").
+   * *•Generar Reporte:•* Procesa el filtro seleccionado y extrae de manera inmediata la información correspondiente desde la base de datos para mostrarla en la tabla.
+   * *•Limpiar:•* Restablece el componente de selección y vacía la rejilla de datos, preparando la interfaz para una nueva consulta o reporte.
 
-**Consultas implementadas:**
-
--   Total de libros registrados.
--   Total de usuarios registrados.
--   Libros disponibles.
--   Libros prestados.
--   Usuarios con préstamos activos.
--   Historial de préstamos.
--   Libros más prestados.
+![Módulo de reportes](Reportes.PNG)
 
 
-------------------------------------------------------------------------
-
-# 11. CAPTURAS DE PANTALLA DEL SISTEMA
-
-En esta sección se deben incluir evidencias de las principales
-funcionalidades.
-
-## 11.1 Menú principal
-
-![Menú principal](ruta/captura-menu.png)
-
-**Descripción:** \[Explicar brevemente la pantalla.\]
-
-## 11.2 Gestión de libros
-
-![Gestión de libros](ruta/captura-libros.png)
-
-**Descripción:** \[Explicar la funcionalidad.\]
-
-## 11.3 Gestión de autores
-
-![Gestión de autores](ruta/captura-autores.png)
-
-**Descripción:** \[Explicar la funcionalidad.\]
-
-## 11.4 Gestión de categorías
-
-![Gestión de categorías](ruta/captura-categorias.png)
-
-**Descripción:** \[Explicar la funcionalidad.\]
-
-## 11.5 Gestión de usuarios
-
-![Gestión de usuarios](ruta/captura-usuarios.png)
-
-**Descripción:** \[Explicar la funcionalidad.\]
-
-## 11.6 Registro de préstamos
-
-![Registro de préstamos](ruta/captura-prestamos.png)
-
-**Descripción:** \[Explicar la funcionalidad.\]
-
-## 11.7 Registro de devoluciones
-
-![Registro de devoluciones](ruta/captura-devoluciones.png)
-
-**Descripción:** \[Explicar la funcionalidad.\]
-
-## 11.8 Consultas
-
-![Consultas](ruta/captura-consultas.png)
-
-**Descripción:** \[Explicar la funcionalidad.\]
 
 
 ------------------------------------------------------------------------
+
+
 
 
 # 13. CONCLUSIONES
 
 ## Conclusión 1
+Se logró el desarrollo integral de la aplicación de escritorio utilizando la interfaz gráfica de Windows Forms en Visual Studio, cumpliendo con los requerimientos funcionales establecidos. El sistema optimiza la gestión de la información del proyecto y proporciona una experiencia de usuario intuitiva, segura y eficiente para la administración de los datos.
 
-\[Explicar qué se logró con el desarrollo del proyecto.\]
 
 ## Conclusión 2
-
-\[Explicar los conocimientos de Programación Orientada a Objetos
-aplicados.\]
+El uso de una arquitectura por capas (como Presentación, Negocio y Datos) garantizó una separación clara de responsabilidades, lo que mejoró la escalabilidad del sistema. Asimismo, la integración con SQL Server a través de la capa de datos permitió un almacenamiento persistente, consultas eficientes y un manejo robusto de las transacciones, asegurando la integridad de la base de datos de la biblioteca.
 
 ## Conclusión 3
-
-\[Explicar los resultados obtenidos con la base de datos y la
-arquitectura por capas.\]
-
-## Conclusión 4
-
-\[Explicar dificultades encontradas y cómo fueron solucionadas.\]
+Durante el desarrollo se presentaron retos técnicos como la gestión de conexiones concurrentes a SQL Server y la validación de datos en tiempo real dentro de los formularios de Windows Forms. Estas dificultades se solucionaron implementando un correcto manejo de excepciones (bloques try-catch), el cierre adecuado de conexiones mediante bloques 'using', y centralizando las reglas de validación en la capa de negocio antes de interactuar con la base de datos.
+Usa el código con precaución.
 
 ------------------------------------------------------------------------
 
-# 14. RECOMENDACIONES
 
--   \[Recomendación relacionada con futuras mejoras.\]
--   \[Recomendación relacionada con seguridad.\]
--   \[Recomendación relacionada con mantenimiento.\]
--   \[Recomendación relacionada con nuevas funcionalidades.\]
--   \[Otra recomendación.\]
-
-------------------------------------------------------------------------
-
-# 15. REFERENCIAS BIBLIOGRÁFICAS
-
-> Utilizar **Normas APA, última edición**.
-
-Ejemplos de formato:
-
-**Libro:**
-
-Apellido, N. (Año). *Título del libro*. Editorial.
-
-**Página web:**
-
-Autor/Organización. (Año). *Título del recurso*. URL
-
-**Documentación técnica:**
-
-Microsoft. (Año). *\[Título de la documentación consultada\]*. Microsoft
-Learn.
-
-> **Importante:** incluir únicamente las fuentes que realmente fueron
-> consultadas durante el desarrollo del proyecto.
-
-------------------------------------------------------------------------
 
 # ANEXOS
 
 ## Anexo A. Repositorio GitHub
 
-**Repositorio:** \[Enlace al repositorio\]
+**Repositorio:** [Enlace al repositorio]()
 
 ## Anexo B. Script de base de datos
 
-**Archivo:** `[Nombre del archivo .sql]`
+**Archivo:** [scrip-biblioteca.sql](scrip-biblioteca.sql)
 
-## Anexo C. Evidencia de Git y GitHub
 
-Insertar capturas que evidencien:
 
--   Creación del repositorio.
--   Commits realizados.
--   Organización del proyecto.
--   Publicación del código.
--   README.md.
-
-## Anexo D. Otras evidencias
-
-\[Agregar cualquier evidencia adicional relevante.\]
 
 ------------------------------------------------------------------------
 
-# LISTA DE VERIFICACIÓN ANTES DE ENTREGAR
 
--   [ ] Portada.
--   [ ] Contraportada.
--   [ ] Introducción.
--   [ ] Objetivos.
--   [ ] Tabla de contenido.
--   [ ] Numeración de páginas.
--   [ ] Planteamiento del problema.
--   [ ] Análisis de requerimientos.
--   [ ] Casos de uso.
--   [ ] Diagrama de casos de uso.
--   [ ] Diagrama de clases.
--   [ ] Modelo entidad-relación.
--   [ ] Diccionario de datos.
--   [ ] Arquitectura del sistema.
--   [ ] Explicación de cada módulo.
--   [ ] Capturas de pantalla.
--   [ ] Pruebas de funcionamiento.
--   [ ] Conclusiones.
--   [ ] Recomendaciones.
--   [ ] Referencias bibliográficas en formato APA.
--   [ ] Código fuente completo.
--   [ ] Script SQL.
--   [ ] Datos de prueba.
--   [ ] Repositorio GitHub.
--   [ ] README.md.
--   [ ] Evidencia de commits.
-
-------------------------------------------------------------------------
 
 
 
